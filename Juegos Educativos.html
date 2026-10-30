@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento y adaptación a pantallas móviles. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título que aparece en la pestaña del navegador. -->
+  <title>InfoUNA Amazonas | Juegos Educativos</title>
+
+  <!-- Icono que aparece en la pestaña del navegador. -->
+  <link rel="icon" type="image/png" href="Logo-UNA.png">
+    
+  <!-- Hoja de estilos principal. Debe estar en la misma carpeta que este archivo. -->
+  <link rel="stylesheet" href="Estilos.css">
+
+</head>
+
+<!---------------------------------------------------------------------------------------------------------------->
+
+<body>
+  <!-- Encabezado institucional: logotipo, nombre de la universidad y valores del proyecto. -->
+  <header class="encabezado-superior">
+    <div class="marca">
+      <div class="logo-una">
+        <img src="Logo-UNA.png" alt="Logo de la Universidad Nacional Abierta">
+      </div>
+
+      <div>
+      <h1>Universidad Nacional Abierta</h1>
+        <small>Apoyo Académico</small>
+      </div>
+    </div>
+
+    <!-- Mensajes institucionales que aparecen a la derecha en pantallas amplias. -->
+    <div class="valores">
+      <div class="valor">
+        <span>◇</span>
+        <div>Orientación<br>académica</div>
+      </div>
+    </div>
+  </header>
+
+<!---------------------------------------------------------------------------------------------------------------->
+  <!-- Menú de navegación principal. Cada enlace dirige a una sección o página del sitio. -->
+  <nav class="barra-menu" aria-label="Navegación principal">
+    <a href="index.html">Inicio</a>
+    <a href="Curso Introductorio.html">Curso Introductorio</a>
+    <a href="Plan Academico.html">Plan Académico</a>
+    <a  href="Biblioteca.html">Biblioteca</a>
+    <a class="activo" href="Juegos Educativos.html">Juegos Educativos</a>
+  </nav>
+  
+  <main class="game-shell pagina-con-encabezado">
+    <!-- Presentación de la sección y explicación de las actividades disponibles. -->
+    <section class="game-hero encabezado-pagina">
+      <div>
+        <span class="kicker">Aula interactiva UNA</span>
+        <h2>Juegos Educativos</h2>
+        <p>Aprende y repasa conceptos de Informática y Castellanocon cuatro actividades dinámicas.
+        <br>Cada partida cambia para que puedas volver a intentarlo.</p>
+      </div>
+
+      <img class="academico-emblema" src="Logo-UNA.png" alt="UNA — Ruta académica">
+      
+    </section>
+
+    <!-- Catálogo de actividades; cada tarjeta enlaza a su juego correspondiente. -->
+    <section class="game-panel">
+      <div class="game-kicker">Elige una actividad</div>
+      <h3>¿Con qué quieres practicar hoy?</h3>
+
+      <!-- Juegos-->
+      <div class="category-grid">
+
+        <!-- Sopa De Letras-->
+        <a class="category-card" href="Sopa-Letras.html">
+          <span class="big-icon">🔎</span>
+          <h3>Sopa de letras</h3>
+          <p>Desafía tu concentración buscando los términos escondidos en el tablero. Un reto dinámico y entretenido para entrenar tu mente paso a paso.</p>
+          <span class="go">Comenzar →</span>
+        </a>
+
+        <!-- Crucigrama-->
+        <a class="category-card" href="Crucigrama.html">
+          <span class="big-icon">🧩</span>
+          <h3>Crucigrama</h3>
+          <p>Descubre las palabras correctas a partir de cada pista, cruza los términos y demuestra tu ingenio en este clásico reto mental.</p>
+          <span class="go">Comenzar →</span>
+        </a>
+
+        <!-- Adivina la Palabra -->
+        <a class="category-card" href="Adivina-Palabra.html">
+          <span class="big-icon">💡</span>
+          <h3>Adivina la palabra</h3>
+          <p>Analiza cada letra, descifra el término secreto y demuestra tu agilidad mental en un reto lleno de deducción.</p>
+          <span class="go">Comenzar →</span>
+        </a>
+
+        <!-- Quiz-->
+        <a class="category-card" href="Quiz.html">
+          <span class="big-icon">🏆</span>
+          <h3>Quiz</h3>
+          <p>Demuestra tu sabiduría ante cada desafío, supera las rondas de preguntas y conviértete en el ganador.</p>
+          <span class="go">Comenzar →</span>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+<!---------------------------------------------------------------------------------------------------------------->
+
+  <!-- Pie de página simplificado: solo conserva el logo, el nombre y la identificación del proyecto. -->
+  <footer class="pie">
+    <!-- Este contenedor usa flexbox en columna para centrar todos sus elementos. -->
+    <div class="pie-grid">
+      <div class="marca-footer">
+        <div class="logo-una">
+          <img src="Logo-UNA.png" alt="Logo de la Universidad Nacional Abierta">
+        </div>
+        <div>
+          <h3>Universidad Nacional Abierta</h3>
+          <small>Proyecto académico de servicio comunitario</small>
+        </div>
+      </div>
+    </div>
+  
+    <div class="copyright">© 2026 · Sitio académico de demostración para servicio comunitario.</div>
+  </footer>
+
+</body>
+</html>
