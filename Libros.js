@@ -127,7 +127,7 @@ const pagination = document.getElementById("paginacionLibros");
 const previousPage = document.getElementById("paginaAnterior");
 const nextPage = document.getElementById("paginaSiguiente");
 const currentPageLabel = document.getElementById("paginaActual");
-const BOOKS_PER_PAGE = 16;
+const BOOKS_PER_PAGE = 12;
 let currentPage = 1;
 let selectedCategory = "";
 
