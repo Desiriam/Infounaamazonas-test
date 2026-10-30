@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento y adaptación a pantallas móviles. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título que aparece en la pestaña del navegador. -->
+  <title>InfoUNA Amazonas | Plan Académico</title>
+
+  <!-- Icono que aparece en la pestaña del navegador. -->
+  <link rel="icon" type="image/png" href="Logo-UNA.png">
+    
+  <!-- Hoja de estilos principal. Debe estar en la misma carpeta que este archivo. -->
+  <link rel="stylesheet" href="Estilos.css">
+
+</head>
+
+<!---------------------------------------------------------------------------------------------------------------->
+
+<body>
+  <div id="header"></div>
+  <div id="site-nav"></div>
+
+  <!-- Contenido principal: presentación del plan, controles interactivos y enlaces de apoyo. -->
+  <main class="contenido-principal pagina-interna pagina-con-encabezado">
+  
+    <!-- Presenta las carreras incluidas y el alcance de la ruta académica. -->
+  <section class="academico-hero encabezado-pagina">
+    <div>
+      <span class="kicker">Proyecto de servicio comunitario</span>
+      <h2>Contaduría Pública y Administración de Empresas</h2>
+      <p>Un espacio de orientación y apoyo para estudiantes que desean consultar las asignaturas, conceptos y materiales de estudio de los primeros semestres.</p>
+    </div>
+    <img class="academico-emblema" src="Logo-UNA.png" alt="UNA — Ruta académica">
+  </section>
+
+  <!-- Introducción que explica el contenido y el uso de las asignaturas. -->
+  <section class="titulo-seccion plan-intro"><h2>Materias de los primeros semestres</h2><p>La información de esta sección se organiza a partir del material académico suministrado para el proyecto. Las asignaturas pueden abrirse para consultar una descripción breve y sus contenidos principales.</p></section>
+
+  <!-- Materias de ambos semestres se muestran en paralelo y se actualizan desde materias.js. -->
+  <section class="semestre-panel">
+    <div class="semestres-grid">
+      <section class="semestre-col" aria-labelledby="primerSemestreTitulo">
+        <div class="semestre-heading"><h3 id="primerSemestreTitulo">Primer Semestre</h3><span class="contador" id="contadorMaterias1">0 materias</span></div>
+        <div id="materiasGrid1" class="materias-grid" data-semestre="1"></div>
+      </section>
+      <section class="semestre-col" aria-labelledby="segundoSemestreTitulo">
+        <div class="semestre-heading"><h3 id="segundoSemestreTitulo">Segundo Semestre</h3><span class="contador" id="contadorMaterias2">0 materias</span></div>
+        <div id="materiasGrid2" class="materias-grid" data-semestre="2"></div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Resume los pasos recomendados para consultar el plan y sus materiales. -->
+  <section class="conexiones">
+    <div><span class="mini-kicker">¿Cómo usar este espacio?</span><h2>Estudia por materia</h2><p>El propósito es facilitar el acceso a conceptos fundamentales y orientar al estudiante hacia el material disponible en la biblioteca digital.</p></div>
+    <div class="conexiones-list"><div><strong>01</strong><span>Compara ambos semestres.</span></div><div><strong>02</strong><span>Elige una asignatura.</span></div><div><strong>03</strong><span>Consulta el material.</span></div></div>
+  </section>
+
+</main>
+
+<!---------------------------------------------------------------------------------------------------------------->
+
+  <div id="footer"></div>
+
+  <script src="SiteLayout.js"></script>
+  <script src="Materias.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <!-- Configuración básica del documento y adaptación a pantallas móviles. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título que aparece en la pestaña del navegador. -->
+  <title>InfoUNA Amazonas | Biblioteca Digital</title>
+  
+  <!-- Icono que aparece en la pestaña del navegador. -->
+  <link rel="icon" type="image/png" href="Logo-UNA.png">
+  
+  <!-- Hoja de estilos principal. Debe estar en la misma carpeta que este archivo. -->
+  <link rel="stylesheet" href="Estilos.css">
+
+</head>
+
+<!---------------------------------------------------------------------------------------------------------------->
+
+<body>
+  <div id="header"></div>
+  <div id="site-nav"></div>
+
+  <main class="biblioteca-shell pagina-con-encabezado">
+    
+    <!-- Las categorías ocupan su propia columna; el encabezado y el catálogo se centran juntos. -->
+    <div class="biblioteca-layout">
+
+      <!-- Libros visibles por etiqueta; Libros.js genera los botones y aplica el filtro. -->
+      <aside class="biblioteca-categorias" aria-label="Categorías de libros">
+        <h3>Categorías</h3>
+        <div id="categoriasLibros" class="biblioteca-category-list"></div>
+      </aside>
+
+      <div class="biblioteca-results">
+        <!-- Presentación de la biblioteca centrada respecto a la búsqueda y los libros. -->
+        <section class="biblioteca-head academico-hero encabezado-pagina">
+          <div>
+            <span class="kicker">Material Académico</span>
+            <h2>Biblioteca Digital</h2>
+            <p>Encuentra libros y accede rápidamente al material de estudio disponible para descarga.</p>
+          </div>
+          
+          <img class="academico-emblema" src="Logo-UNA.png" alt="UNA — Ruta académica">
+          
+        </section>
+
+        <!-- La búsqueda comparte el eje central del encabezado y del catálogo. -->
+        <div class="biblioteca-search">
+          <input id="buscadorLibros" type="search" placeholder="Buscar por nombre o etiqueta..." aria-label="Buscar libro por nombre o etiqueta" autocomplete="off">
+          <button id="limpiarBusqueda" type="button" aria-label="Limpiar búsqueda">⌕</button>
+        </div>
+
+        <!-- Libros.js inserta aquí las tarjetas o el mensaje de búsqueda vacía. -->
+        <section id="librosGrid" class="biblioteca-grid" aria-live="polite"></section>
+        <!-- Los controles se muestran solo si los resultados ocupan más de una página. -->
+        <nav id="paginacionLibros" class="biblioteca-pagination" aria-label="Paginación de libros" hidden>
+          <button id="paginaAnterior" type="button">Anterior</button>
+          <span id="paginaActual" aria-live="polite"></span>
+          <button id="paginaSiguiente" type="button">Siguiente</button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Aviso sobre el destino de los enlaces de descarga de los libros. -->
+    <div class="biblioteca-info">
+      <strong>Descarga directa:</strong> cada botón abre la descarga del archivo asociado en Google Drive.
+    </div>
+
+  </main>
+
+<!---------------------------------------------------------------------------------------------------------------->
+
+  <div id="footer"></div>
+
+<!-- La lógica de datos, filtrado, renderizado y paginación se mantiene en un archivo aparte. -->
+<script src="SiteLayout.js"></script>
+<script src="Libros.js"></script>
+
+</body>
+</html>
