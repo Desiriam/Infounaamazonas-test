@@ -221,7 +221,7 @@ function renderWordSearch() {
     board.appendChild(cell);
   }));
   board.addEventListener("pointerdown", beginWordSelection);
-  board.addEventListener("pointerover", updateWordSelection);
+  board.addEventListener("pointermove", updateWordSelection);
   document.getElementById("reset").addEventListener("click", confirmWordSearchReset);
   document.getElementById("cancelReset").addEventListener("click", closeWordSearchReset);
   document.getElementById("confirmReset").addEventListener("click", startWordSearch);
