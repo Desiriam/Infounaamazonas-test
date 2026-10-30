@@ -233,12 +233,14 @@ previousPage.addEventListener("click", () => {
   if (currentPage > 1) {
     currentPage--;
     renderBooks();
+    grid.scrollIntoView({behavior:"smooth", block:"start"});
   }
 });
 
 nextPage.addEventListener("click", () => {
   currentPage++;
   renderBooks();
+  grid.scrollIntoView({behavior:"smooth", block:"start"});
 });
 
 renderCategories();
