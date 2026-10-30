@@ -76,6 +76,7 @@ let activeCells = [];
 let selectionStart = null;
 let selecting = false;
 let lastSoundingCell = null;
+let activePointerId = null;
 const wordSearchSize = 15;
 const wordSearchDirections = [
   [0, 1], [1, 0], [1, 1], [-1, 1]
@@ -168,6 +169,7 @@ function startWordSearch() {
   activeCells = [];
   selectionStart = null;
   selecting = false;
+  activePointerId = null;
   renderWordSearch();
 }
 
@@ -221,7 +223,6 @@ function renderWordSearch() {
     board.appendChild(cell);
   }));
   board.addEventListener("pointerdown", beginWordSelection);
-  board.addEventListener("pointermove", updateWordSelection);
   document.getElementById("reset").addEventListener("click", confirmWordSearchReset);
   document.getElementById("cancelReset").addEventListener("click", closeWordSearchReset);
   document.getElementById("confirmReset").addEventListener("click", startWordSearch);
@@ -339,11 +340,12 @@ function showWordSearchCelebration() {
 }
 
 function beginWordSelection(event) {
-  if (!document.getElementById("wordReveal").hidden) return;
+  if (!event.isPrimary || !document.getElementById("wordReveal").hidden) return;
   const cell = event.target.closest(".ws-cell");
   if (!cell) return;
   event.preventDefault();
   selecting = true;
+  activePointerId = event.pointerId;
   selectionStart = [Number(cell.dataset.row), Number(cell.dataset.column)];
   activeCells = [selectionStart];
   lastSoundingCell = `${selectionStart[0]},${selectionStart[1]}`;
@@ -352,9 +354,9 @@ function beginWordSelection(event) {
 }
 
 function updateWordSelection(event) {
-  if (!selecting) return;
-  const cell = event.target.closest(".ws-cell");
-  if (!cell) return;
+  if (!selecting || event.pointerId !== activePointerId) return;
+  const cell = document.elementFromPoint(event.clientX, event.clientY)?.closest(".ws-cell");
+  if (!cell || !document.getElementById("wordSearchBoard").contains(cell)) return;
   const row = Number(cell.dataset.row);
   const column = Number(cell.dataset.column);
   const rowDifference = row - selectionStart[0];
@@ -376,6 +378,8 @@ function updateWordSelection(event) {
   paintWordSelection();
 }
 
+document.addEventListener("pointermove", updateWordSelection);
+
 function paintWordSelection() {
   document.querySelectorAll(".ws-cell.selecting").forEach(cell => cell.classList.remove("selecting"));
   activeCells.forEach(([row, column]) => {
@@ -383,9 +387,10 @@ function paintWordSelection() {
   });
 }
 
-function finishWordSelection() {
-  if (!selecting) return;
+function finishWordSelection(event) {
+  if (!selecting || event.pointerId !== activePointerId) return;
   selecting = false;
+  activePointerId = null;
   const selected = activeCells.map(([row, column]) => wordSearchGrid[row][column]).join("");
   const wordIndex = wordSearchWords.findIndex(word => {
     const answer = normalizeWord(word[0]);
@@ -425,6 +430,14 @@ function finishWordSelection() {
 }
 
 document.addEventListener("pointerup", finishWordSelection);
+document.addEventListener("pointercancel", event => {
+  if (!selecting || event.pointerId !== activePointerId) return;
+  selecting = false;
+  activePointerId = null;
+  lastSoundingCell = null;
+  activeCells = [];
+  paintWordSelection();
+});
 
 let crosswordTargets = [];
 let crosswordPlacements = [];
