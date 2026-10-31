@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento y recursos visuales compartidos. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InfoUNA Amazonas | Quiz</title>
+  <link rel="icon" type="image/png" href="Logo-UNA.png">
+  <link rel="stylesheet" href="Estilos.css">
+</head>
+<body data-game="quiz">
+  <!-- SiteLayout.js inserta aquí el encabezado y la navegación comunes. -->
+  <div id="header"></div>
+  <div id="site-nav"></div>
+
+  <!-- Presentación del quiz y contenedor donde se muestra su inicio o la partida. -->
+  <main class="game-shell pagina-con-encabezado">
+    <section class="game-hero encabezado-pagina">
+      <div>
+        <span class="game-kicker">Juego 04 · Aula interactiva</span>
+        <h2>Quiz</h2>
+        <p>Responde diez preguntas aleatorias sobre conceptos de las materias del plan académico. Usa las pistas y administra tus vidas antes de que se agote el tiempo.</p>
+      </div>
+
+      <img class="academico-emblema" src="Logo-UNA.png" alt="UNA — Ruta académica">
+      
+    </section>
+    <div id="app"></div>
+  </main>
+
+  <!-- El pie se genera desde el diseño común; el aviso anuncia mensajes del juego. -->
+  <div id="footer"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Cargar primero el diseño compartido y luego los datos y la lógica de juegos. -->
+  <script src="SiteLayout.js"></script>
+  <script src="Juegos-Data.js"></script>
+</body>
+</html>

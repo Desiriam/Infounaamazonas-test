@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento y adaptación a pantallas móviles. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título e icono de la página. -->
+  <title>InfoUNA Amazonas | Crucigrama</title>
+  <link rel="icon" type="image/png" href="Logo-UNA.png">
+
+  <!-- Hoja de estilos compartida por el sitio y los juegos. -->
+  <link rel="stylesheet" href="Estilos.css">
+</head>
+<body data-game="crucigrama">
+  <!-- SiteLayout.js inserta aquí el encabezado y la navegación compartidos. -->
+  <div id="header"></div>
+  <div id="site-nav"></div>
+
+  <!-- Contenido propio del crucigrama. -->
+  <main class="game-shell pagina-con-encabezado">
+    <section class="game-hero encabezado-pagina">
+      <div>
+        <span class="game-kicker">Juego 02 · Aula interactiva</span>
+        <h2>Crucigrama</h2>
+        <p>Lee las definiciones y organiza las letras para descubrir 10 conceptos relacionados con las materias del plan académico.</p>
+      </div>
+      <img class="academico-emblema" src="Logo-UNA.png" alt="UNA — Ruta académica">
+    </section>
+
+    <!-- Juegos-Data.js genera en este contenedor el tablero y sus controles. -->
+    <div id="app"></div>
+  </main>
+
+  <!-- SiteLayout.js inserta aquí el pie de página compartido. -->
+  <div id="footer"></div>
+
+  <!-- Mensajes breves para informar acciones del juego. -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Carga del diseño compartido, los datos y la lógica de los juegos. -->
+  <script src="SiteLayout.js"></script>
+  <script src="Juegos-Data.js"></script>
+</body>
+</html>

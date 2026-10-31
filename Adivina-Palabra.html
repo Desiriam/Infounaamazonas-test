@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración del documento y recursos visuales compartidos. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InfoUNA Amazonas | Adivina la palabra</title>
+  <link rel="icon" type="image/png" href="Logo-UNA.png">
+  <link rel="stylesheet" href="Estilos.css">
+</head>
+<body data-game="adivina">
+  <!-- Los elementos compartidos se completan desde SiteLayout.js. -->
+  <div id="header"></div>
+  <div id="site-nav"></div>
+
+  <!-- El tipo de juego se indica en el body y Juegos-Data.js genera la partida. -->
+  <main class="game-shell pagina-con-encabezado">
+    <section class="game-hero encabezado-pagina">
+      <div>
+        <span class="game-kicker">Juego 03 · Aula interactiva</span>
+        <h2>Adivina la palabra</h2>
+        <p>Lee las definiciones y organiza las letras para descubrir 10 conceptos relacionados con las materias del plan académico.</p>
+      </div>
+          
+      <img class="academico-emblema" src="Logo-UNA.png" alt="UNA — Ruta académica">
+
+    </section>
+
+    <!-- Contenedor dinámico de la actividad. -->
+    <div id="app"></div>
+  </main>
+
+  <!-- Avisos accesibles y recursos JavaScript; cargar el diseño antes del juego. -->
+  <div id="footer"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="SiteLayout.js"></script>
+  <script src="Juegos-Data.js"></script>
+</body>
+</html>

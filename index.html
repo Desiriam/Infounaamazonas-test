@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento y adaptación a pantallas móviles. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título que aparece en la pestaña del navegador. -->
+  <title>InfoUNA Amazonas</title>
+
+  <!-- Icono que aparece en la pestaña del navegador. -->
+  <link rel="icon" type="image/png" href="Logo-UNA.png">
+    
+  <!-- Hoja de estilos principal. Debe estar en la misma carpeta que este archivo. -->
+  <link rel="stylesheet" href="Estilos.css">
+
+</head>
+
+<!---------------------------------------------------------------------------------------------------------------->
+
+<body>
+  <div id="header"></div>
+  <div id="site-nav"></div>
+
+    <!-- Presentación principal: descripción del proyecto y acceso al plan académico. -->
+  <section class="hero">
+    <div class="hero-text">
+      <!-- Elementos decorativos y título principal de la página. -->
+      <span class="puntos" aria-hidden="true"></span>
+      <div class="linea-dorada" aria-hidden="true"></div>
+      <span class="kicker">Proyecto de servicio comunitario</span>
+      <h2>CONTADURÍA PÚBLICA<br>Y ADMINISTRACIÓN<br>DE EMPRESAS</h2>
+      <p>Un espacio digital de orientación para conocer las materias compartidas de los primeros semestres y encontrar material de apoyo para el estudio.</p>
+      <a class="boton" href="Plan Academico.html">Explorar plan académico <span aria-hidden="true">→</span></a>
+    </div>
+
+    <!-- Imagen decorativa de la sede; se establece desde CSS mediante Sede-Una.png. -->
+    <div class="hero-media" role="img" aria-label="Imagen de la sede de la Universidad Nacional Abierta"></div>
+  </section>
+
+  <!-- Contenido central con una introducción y tres accesos a recursos del proyecto. -->
+  <main class="contenido-principal">
+    <section aria-labelledby="titulo-recursos">
+      <div class="titulo-seccion">
+        <span class="kicker">¿Qué encontrarás?</span>
+        <h2 id="titulo-recursos">Una ruta académica más clara</h2>
+        <p>El proyecto reúne información organizada para que el estudiante pueda ubicar rápidamente sus materias, reconocer conceptos fundamentales y continuar hacia los recursos de estudio.</p>
+      </div>
+
+      <!-- Las tarjetas se distribuyen y centran automáticamente según el espacio disponible. -->
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <div class="icono" aria-hidden="true">▦</div>
+          <h3>Materias</h3>
+          <p>Consulta las asignaturas organizadas por primer y segundo semestre.</p>
+          <a class="enlace" href="Plan Academico.html">Ver Materias →</a>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono" aria-hidden="true">▥</div>
+          <h3>Material de Apoyo</h3>
+          <p>Encuentra los recursos académicos reunidos para facilitar el estudio.</p>
+          <a class="enlace" href="Biblioteca.html">Ir a Biblioteca →</a>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono" aria-hidden="true">✦</div>
+          <h3>Aprender jugando</h3>
+          <p>Refuerza conocimientos con las actividades educativas que ya forman parte del proyecto.</p>
+          <a class="enlace" href="Juegos Educativos.html">Jugar →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+<!---------------------------------------------------------------------------------------------------------------->
+
+  <div id="footer"></div>
+  <script src="SiteLayout.js"></script>
+</body>
+</html>
