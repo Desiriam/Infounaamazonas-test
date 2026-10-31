@@ -6,9 +6,9 @@
 */
 const LIBROS = [
   {
-    nombre: "Chiyuu Mahou",
+    nombre: "Alicia en el País de las Maravillas",
     etiquetas: ["Anime", "Manga",],
-    drive: "https://drive.google.com/file/d/1uwFKPsTQM1-BXxLy0G3QQfpOhy0c-4pd/view?usp=drive_link"
+    drive: "https://drive.google.com/file/d/1zvUvzYrI8l5qWG44byWlqPg-0QiO4hnL/view?usp=drivesdk"
   },
   {
     nombre: "Introducción a la contabilidad (ejemplo)",
